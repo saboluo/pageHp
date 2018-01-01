@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="pending.home.dao.UserMapper" >
+    <select id="findById" resultType="pending.home.entity.User">
+        select * from t_user where id = #{id,jdbcType=NUMERIC}
+    </select>
+    <select id="findByPage" resultType="pending.home.entity.User">
+        SELECT * from t_user WHERE name =#{name};
+    </select>
+</mapper>
